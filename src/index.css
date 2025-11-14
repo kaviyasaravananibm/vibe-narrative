@@ -2,6 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: 45 15% 97%;
+    --foreground: 240 10% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+    --primary: 280 65% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 15%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 10% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 280 65% 60%;
+    --radius: 0.5rem;
+    
+    /* Emotion colors */
+    --joy: 45 95% 60%;
+    --joy-foreground: 45 90% 20%;
+    --fear: 260 60% 45%;
+    --fear-foreground: 0 0% 100%;
+    --sadness: 220 60% 50%;
+    --sadness-foreground: 0 0% 100%;
+    --anger: 0 75% 55%;
+    --anger-foreground: 0 0% 100%;
+    --love: 340 75% 60%;
+    --love-foreground: 0 0% 100%;
+    
+    /* Gradients */
+    --gradient-joy: linear-gradient(135deg, hsl(45 95% 60%), hsl(35 90% 65%));
+    --gradient-fear: linear-gradient(135deg, hsl(260 60% 45%), hsl(280 50% 30%));
+    --gradient-sadness: linear-gradient(135deg, hsl(220 60% 50%), hsl(210 55% 40%));
+    --gradient-anger: linear-gradient(135deg, hsl(0 75% 55%), hsl(15 70% 50%));
+    --gradient-love: linear-gradient(135deg, hsl(340 75% 60%), hsl(320 70% 55%));
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 240 10% 10%;
+    --foreground: 0 0% 95%;
+    --card: 240 10% 13%;
+    --card-foreground: 0 0% 95%;
+    --popover: 240 10% 13%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 280 65% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 20%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 240 5% 20%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 240 5% 20%;
+    --accent-foreground: 0 0% 95%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 6% 20%;
+    --input: 240 6% 20%;
+    --ring: 280 65% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
