@@ -57,6 +57,26 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        joy: {
+          DEFAULT: "hsl(var(--joy))",
+          foreground: "hsl(var(--joy-foreground))",
+        },
+        fear: {
+          DEFAULT: "hsl(var(--fear))",
+          foreground: "hsl(var(--fear-foreground))",
+        },
+        sadness: {
+          DEFAULT: "hsl(var(--sadness))",
+          foreground: "hsl(var(--sadness-foreground))",
+        },
+        anger: {
+          DEFAULT: "hsl(var(--anger))",
+          foreground: "hsl(var(--anger-foreground))",
+        },
+        love: {
+          DEFAULT: "hsl(var(--love))",
+          foreground: "hsl(var(--love-foreground))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +100,20 @@ export default {
             height: "0",
           },
         },
+        "pulse-glow": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.6" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        float: "float 3s ease-in-out infinite",
       },
     },
   },
